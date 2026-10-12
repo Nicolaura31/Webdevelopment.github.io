@@ -1,0 +1,42 @@
+.menu 
+{
+    display: none; /*закрыть*/
+}
+
+.menu-icon 
+{
+    cursor: pointer; /*рука*/
+}
+
+.menu-icon:hover
+ {
+    color: #333; /*цвет*/
+}
+
+#menu-toggle 
+{
+    display: none; /*-чекбокс*/
+}
+
+#menu-toggle:checked ~.menu
+ {
+    display: block; /*меню видимости*/
+}
+
+.menu ul
+ {
+    list-style-type: none; /**/
+    padding: 0;
+}
+
+.menu ul li 
+{
+    padding:10px; /*закрыть*/
+}
+
+.menu ul li a 
+{
+    text-decoration: none; /*закрыть*/
+    color: #333;
+}
+
