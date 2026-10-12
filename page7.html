@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>задания 9 работа</title>
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu.js" defer></script>
+    
+    <style>
+        table { border-collapse: collapse; width: 200px; text-align: center; }
+        th, td { border: 1px solid black; padding: 5px; }
+        th { background-color: #f0f0f0; }
+    </style>
+</head>
+<body style="padding-left: 280px;">
+    <h2>Проверка чисел и пароля</h2>
+    <script>
+        let num1 = Number(prompt("Введите первое число:"));
+    let num2 = Number(prompt("Введите второе число:"));
+
+    while (num1 !== num2) {
+        if (num1 > num2) {
+            alert("Первое число больше, чем второе.");
+        } else if (num2 > num1) {
+            alert("Второе число больше, чем первое.");
+        }
+        
+        alert("Числа не равны. Попробуйте еще раз!");
+        num1 = Number(prompt("Введите первое число:"));
+        num2 = Number(prompt("Введите второе число:"));
+    }
+        alert("числа равны");
+        let password = "admin";
+        let userInput = prompt("Введите пароль:");
+        
+        if (userInput === password) {
+            document.write("<p style='color: green; font-weight: bold;'>Пароль верен!</p>");
+        } else {
+            alert("Неправильно введенный пароль!");
+            document.write("<p style='color: red;'>Доступ закрыт.</p>");
+        }
+    </script>
+    <h2>Отрисовка линий</h2>
+    
+    <script>
+        function line(width) {
+            document.write('<hr style="width: ' + width + 'px; margin: 5px auto; background-color: #7c3aed; height: 3px; border: none;">');
+        }
+
+        for (let i = 1; i <= 10; i++) {
+            line(i * 10);
+        }
+    </script>
+    
+    <h2>Таблица степеней двойки</h2>
+    <script>
+        document.write("<table>");
+        document.write("<tr><th>Степень</th><th>Результат</th></tr>");
+        
+        for (let i = 0; i <= 5; i++) {
+            document.write("<tr><td>2<sup>" + i + "</sup></td><td>" + Math.pow(2, i) + "</td></tr>");
+        }
+        
+        document.write("</table>");
+    </script>
+    
+    <h2>Разделение массивов</h2>
+    
+    <script>
+        function splitSubjects() {
+            let subjects = ["Математика", "Физика", "Информатика", "История", "Литература", "Обществознание"];
+            
+            let exactSciences = subjects.slice(0, 3);
+            let humanities = subjects.slice(3, 6);
+            
+            document.write("<h3>Точные науки:</h3>");
+            document.write("<p>" + exactSciences.join(", ") + "</p>");
+            
+            document.write("<h3>Гуманитарные науки:</h3>");
+            document.write("<p>" + humanities.join(", ") + "</p>");
+        }
+    </script>
+    
+    <script>
+        splitSubjects();
+    </script>
+</body>
+</html>

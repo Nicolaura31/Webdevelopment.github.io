@@ -14,6 +14,12 @@ const menuHTML = `
         <a href="page4.html" class="nav-item"><span class="menu-icon">&#9998;</span> Анкета</a>
         
         <a href="page5.html" class="nav-item"><span class="menu-icon">&#10022;</span> Стили</a>
+        
+        <a href="page6.html" class="nav-item"><span class="menu-icon">&#9881;</span> Практика №5</a>
+        
+        <a href="page7.html" class="nav-item"><span class="menu-icon">&#9874;</span> практика №9</a>
+        
+        <a href="page8.html" class="nav-item"><span class="menu-icon">&#9874;</span> практика №9 последнее задание</a>
     </nav>
 </aside>
 `;

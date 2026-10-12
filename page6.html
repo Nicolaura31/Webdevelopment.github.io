@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическая работа №5</title>
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu.js" defer></script>
+
+    <script type="text/javascript">
+        var arr = ["Иванов", "Петров", "Сидоров", "Смирнов", "Кузнецов"];
+        
+        var counter = 0;
+
+        function add_to_list() {
+            if (typeof(arr[counter]) != "undefined") {
+                
+                var list = document.getElementById('list');
+                
+                var li = document.createElement('LI');
+                
+                li.innerHTML = arr[counter];
+                
+                list.appendChild(li);
+                
+                counter++;
+            } else {
+                alert("Все элементы из массива добавлены на страницу!");
+            }
+        }
+    </script>
+
+    <style>
+        .content {
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Практическая работа №5</h1>
+        
+        <p onclick="add_to_list()" style="color: blue; text-decoration: underline; cursor: pointer;">
+            Добавить в список
+        </p>
+        
+        <ol id="list"></ol>
+    </div>
+
+</body>
+</html>
