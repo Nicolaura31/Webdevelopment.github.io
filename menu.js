@@ -22,6 +22,8 @@ const menuHTML = `
         <a href="page8.html" class="nav-item"><span class="menu-icon">&#9874;</span> практика №9 последнее задание</a>
         
         <a href="page9.html" class="nav-item"><span class="menu-icon">&#9874;</span> Аудио и видео</a>
+        
+        <a href="page10.html" class="nav-item"><span class="menu-icon">&#9874;</span>задание 10</a>
     </nav>
 </aside>
 `;

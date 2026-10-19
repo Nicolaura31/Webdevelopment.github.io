@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu.js" defer></script>
+    <meta charset="UTF-8">
+    <title>практическая 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Задание 1</h2>
+    <script>
+        document.bgColor = "#E7E6D8";
+        document.fgColor = "red";
+        
+        document.write("<br><br>Дата последней модификации документа: " + document.lastModified);
+    </script>
+    
+    
+    <h2>Задание 2</h2>
+    <script>
+        function openNewWindow() {
+            window.open("", "NewWindow", "width=500,height=500,resizable=yes");
+        }
+    </script>
+    <a href="#" onclick="openNewWindow(); return false;">Щелкните на ссылке для получения справочной информации</a>
+    
+    <h2>Задание 3</h2>
+    <script>
+        setTimeout(function() {
+            window.location.href = "index.html"; 
+        }, 500000);
+    </script>
+    <p>Переадресация произойдет через 5 секунд...</p>
+    
+    <h2>Задание 4</h2>
+    <p>
+        <a href="test.pdf" onclick="return confirm('Для загрузки документа требуется программа Acrobat. Продолжить загрузку?')">
+            Скачать PDF документ
+        </a>
+    </p>
+    <p>
+        <a href="#" onmouseover="document.bgColor='red';" onmouseout="document.bgColor='#E7E6D8';">
+            Наведите мышь, чтобы изменить фон на красный
+        </a>
+    </p>
+    
+    <h2>Задание 5</h2>
+    <script>
+        function enlargeImage(img) {
+            img.style.width = "400px";
+        }
+
+        function shrinkImage(img) {
+            img.style.width = "220px";
+        }
+    </script>
+    <img src="student.jpg" alt="Фото" width="220" 
+         onmouseover="enlargeImage(this)" 
+         onmouseout="shrinkImage(this)" 
+         style="transition: 0.3s;">
+         
+         
+         <h2>Задание 6</h2>
+         <script>
+        function checkForm(event) {
+            let form = document.forms["regForm"];
+            
+            
+            if (form["userName"].value.trim() === "") {
+                alert("Пожалуйста, заполните поле имени.");
+                form["userName"].focus();
+                event.preventDefault();
+                return false;
+            }
+            
+            
+            if (form["userPass"].value.length <= 4) {
+                alert("Пароль должен содержать больше 4-х символов.");
+                form["userPass"].focus();
+                event.preventDefault();
+                return false;
+            }
+            
+            
+            if (form["userPass"].value !== form["userPassConfirm"].value) {
+                alert("Пароли не совпадают.");
+                form["userPassConfirm"].focus();
+                event.preventDefault();
+                return false;
+            }
+            
+            
+            let email = form["userEmail"].value;
+            if (email === "" || email.indexOf("@") === -1) {
+                alert("Поле электронного адреса не заполнено или не содержит символ '@'.");
+                form["userEmail"].focus();
+                event.preventDefault();
+                return false;
+            }
+            
+            
+            
+            if (form["userMessage"].value.length <= 10) {
+                alert("Сообщение должно содержать больше 10 символов.");
+                form["userMessage"].focus();
+                event.preventDefault();
+                return false;
+            }
+            
+            alert("Все данные введены верно!");
+            return true;
+        }
+    </script>
+    
+    <form name="regForm" onsubmit="checkForm(event)">
+        <p>
+            <label>Ваше имя*<br>
+            <input type="text" name="userName"></label>
+        </p>
+        <p>
+            <label>Пароль *<br>
+            <input type="password" name="userPass"></label>
+        </p>
+        <p>
+            <label>Подтверждение пароля*<br>
+            <input type="password" name="userPassConfirm"></label>
+        </p>
+        <p>
+            <label>Электронный адрес: *<br>
+            <input type="text" name="userEmail"></label>
+        </p>
+        <p>
+            <label>Тема сообщения:<br>
+            <input type="text" name="userSubject"></label>
+        </p>
+        <p>
+            <label>Сообщение:<br>
+            <textarea name="userMessage" rows="5" cols="30"></textarea></label>
+        </p>
+        <p>
+            <input type="submit" value="Отправить">
+        </p>
+        <p><small>* – необходимые для заполнения поля</small></p>
+    </form>
+</body>
