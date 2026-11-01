@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>номер 4</title>
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu.js" defer></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+    <style>
+        table { border-collapse: collapse; width: 200px; text-align: center; }
+        th, td { border: 1px solid black; padding: 5px; }
+        th { background-color: #f0f0f0; }
+        
+        
+        
+        .map-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+        }
+
+        .legend-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+            padding-bottom: 30px;
+            max-width: 500px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .legend-item:hover {
+            background-color: #e9e9e9;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+        }
+
+        .color-box {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            border-radius: 4px;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body style="padding-left: 280px;">
+<img src="прямоугольник.png" usemap="#colors_map" alt="Цветные треугольники" border="0">
+
+    <map name="colors_map">
+
+        <area shape="poly" coords="5,0,196,1,100,72" href="index.html" title="Перейти на главную страницу" alt="Красный">
+
+        <area shape="poly" coords="105,75,200,3,200,148" href="page9.html" title="Перейти на страницу с песнями и видео" alt="Желтый">
+
+        <area shape="poly" coords="5,148,98,77,193,149" href="page6.html" title="Перейти на страницу с массиво" alt="Зеленый">
+
+        <area shape="poly" coords="1,146,96,75,1,4" href="page4.html" title="Перейти на страницу с анкетой" alt="Оранжевый">
+    </map>
+
+
+<img src="map.jpg" usemap="#cyberpunk_map" alt="Карта Cyberpunk 2077" class="map-image" border="0">
+
+    <map name="cyberpunk_map">
+        <area shape="poly" coords="614,719,282,571,527,270,686,282,856,405,996,605,903,614,779,642,686,684" href="https://cyberpunk.fandom.com/ru/wiki/Набережная_Арасаки" title="Набережная Арасаки" alt="Arasaka Waterfront">
+        <area shape="poly" coords="697,282,743,278,751,144,1053,47,1144,320,1366,436,1362,636,1269,660,1156,666,1150,616,1156,581,1091,510,1075,531,1041,527,970,555,854,397" href="https://cyberpunk.fandom.com/ru/wiki/Нортсайд" title="Нортсайд" alt="Northside Industrial District">
+        <area shape="poly" coords="988,982,654,984,549,1035,478,974,624,749,614,725,802,642,897,622,1032,610,1006,646" href="https://cyberpunk.fandom.com/ru/wiki/Маленький_Китай" title="Маленький Китай" alt="Little China">
+        <area shape="poly" coords="1010,980,1097,814,1152,670,1140,622,1144,579,1091,521,1073,539,1047,537,978,561,1006,603,1041,599,1051,605,1018,648,994,980" href="https://cyberpunk.fandom.com/ru/wiki/Кабуки" title="Кабуки" alt="Kabuki">
+
+
+        <area shape="poly" coords="1026,983,1111,1035,1180,1171,1285,1248,1291,1238,1324,1173,1358,1054,1417,1054,1403,960,1403,938,1425,920,1449,772,1512,629,1378,604,1378,647,1271,671,1164,679,1115,813" href="https://cyberpunk.fandom.com/ru/wiki/Джапантаун" title="Джапантаун" alt="Japantown">
+        <area shape="poly" coords="1518,631,1463,766,1433,912,1437,926,1415,938,1411,958,1429,1088,1542,1209,1763,1213,1787,1029,1674,788" href="https://cyberpunk.fandom.com/ru/wiki/Норт-Оукс" title="Норт-Оукс" alt="North Oaks">
+        <area shape="poly" coords="1302,1262,1295,1242,1332,1177,1364,1058,1417,1064,1417,1090,1544,1222,1761,1224,1838,1377,1544,1408" href="https://cyberpunk.fandom.com/ru/wiki/Чартер-Хилл" title="Чартер-Хилл" alt="Charter Hills">
+
+
+        <area shape="poly" coords="761,1256,1002,997,658,997,549,1054,468,983,355,1084,468,1242" href="https://cyberpunk.fandom.com/ru/wiki/Деловой_квартал" title="Деловой квартал" alt="Downtown">
+        <area shape="poly" coords="1012,999,1099,1047,1152,1149,1010,1327,978,1349,945,1355,919,1355,889,1347,860,1331,844,1315,830,1294,822,1270,816,1256,775,1256" href="https://cyberpunk.fandom.com/ru/wiki/Площадь_Корпораций" title="Площадь Корпораций" alt="Corpo Plaza">
+
+
+        <area shape="poly" coords="474,1258,470,1434,595,1612,644,1689,713,1691,715,1266" href="https://cyberpunk.fandom.com/ru/wiki/Уэллспрингс" title="Уэллспрингс" alt="Well Springs">
+        <area shape="poly" coords="727,1270,719,1687,970,1689,1057,1576,986,1363,954,1371,921,1371,895,1369,858,1351,838,1337,822,1317,810,1296,808,1270" href="https://cyberpunk.fandom.com/ru/wiki/Глен" title="Глен" alt="The Glen">
+        <area shape="poly" coords="994,1358,1069,1571,1293,1269,1168,1180,1158,1166,1022,1342" href="https://cyberpunk.fandom.com/ru/wiki/Виста-Дель-Рей" title="Виста-Дель-Рей" alt="Vista Del Rey">
+
+
+        <area shape="poly" coords="978,1706,994,1714,1010,1723,1022,1731,1039,1753,1043,1765,1075,1795,1083,1812,1138,1862,1213,1909,1536,1470,1540,1423,1304,1279" href="https://cyberpunk.fandom.com/ru/wiki/Арройо" title="Арройо" alt="Arroyo">
+        <area shape="poly" coords="1219,1919,1283,1963,1259,2008,1326,2050,1587,2073,1676,2028,1807,1802,1842,1389,1548,1425,1548,1474" href="https://cyberpunk.fandom.com/ru/wiki/Ранчо_Коронадо" title="Ранчо Коронадо" alt="Rancho Coronado">
+
+
+        <area shape="poly" coords="39,1565,344,1927,458,2135,581,2148,1213,2044,1265,1963,1130,1878,1059,1804,1030,1779,1026,1755,1002,1737,968,1723,962,1698,630,1702,587,1627,460,1449,294,1496" href="https://cyberpunk.fandom.com/ru/wiki/Уэст-Уинд_Истейт" title="Уэст-Уинд Истейт" alt="West End Estate">
+    </map>
+
+    <div class="legend-container">
+        <a href="https://cyberpunk.fandom.com/ru/wiki/Уотсон" class="legend-item" title="Информация о районе Уотсон">
+            <div class="color-box" style="background-color: #5d92c7;"></div>
+            Уотсон
+        </a>
+        <a href="https://cyberpunk.fandom.com/ru/wiki/Уэстбрук" class="legend-item" title="Информация о районе Уэстбрук">
+            <div class="color-box" style="background-color: #c79fb4;"></div>
+            Уэстбрук
+        </a>
+        <a href="https://cyberpunk.fandom.com/ru/wiki/Городской_центр" class="legend-item" title="Информация о Городском центре">
+            <div class="color-box" style="background-color: #4b89ad;"></div>
+            Городской центр
+        </a>
+        <a href="https://cyberpunk.fandom.com/ru/wiki/Хейвуд" class="legend-item" title="Информация о районе Хейвуд">
+            <div class="color-box" style="background-color: #8da68f;"></div>
+            Хейвуд
+        </a>
+        <a href="https://cyberpunk.fandom.com/ru/wiki/Санто-Доминго" class="legend-item" title="Информация о районе Санто-Доминго">
+            <div class="color-box" style="background-color: #dbb38a;"></div>
+            Санто-Доминго
+        </a>
+        <a href="https://cyberpunk.fandom.com/ru/wiki/Пасифика" class="legend-item" title="Информация о районе Пасифика">
+            <div class="color-box" style="background-color: #c4767b;"></div>
+            Пасифика
+        </a>
+    </div>
+<script>
+        imageMapResize();
+    </script>
+</body>

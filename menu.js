@@ -24,6 +24,10 @@ const menuHTML = `
         <a href="page9.html" class="nav-item"><span class="menu-icon">&#9874;</span> Аудио и видео</a>
         
         <a href="page10.html" class="nav-item"><span class="menu-icon">&#9874;</span>задание 10</a>
+        
+        
+        
+        <a href="page11.html" class="nav-item"><span class="menu-icon">&#9874;</span>карта и прямоугольник</a>
     </nav>
 </aside>
 `;
