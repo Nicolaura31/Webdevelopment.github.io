@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>выбор картинки</title>
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu.js" defer></script>
+    <style>
+        .bas { position: relative; width: 1000px; height: 680px; margin: auto; }
+        
+        .im { 
+            position: absolute; 
+            width: 300px; 
+            border: 1px solid #000000; 
+            z-index: 1; 
+            transition: all 1s ease; 
+        }
+        
+        #i1 { left: 10px; top: 10px; }
+        #i2 { left: 322px; top: 10px; }
+        #i3 { left: 634px; top: 10px; }
+        #i4 { left: 10px; top: 330px; }
+        #i5 { left: 322px; top: 330px; }
+        #i6 { left: 634px; top: 330px; }
+    </style>
+    
+   <script>
+        let y = 1;
+        let w = 0;
+        let h = 0;
+        let activeImg = null;
+        let isLocked = false;
+
+        addEventListener("mouseover", (ev) => {
+            if (y === 2 || isLocked) return;
+
+            let e = ev.target;
+            if (e.tagName == "IMG") {
+                for (let i = 1; i < 7; i++) {
+                    let b = "i" + i;
+                    if (e.id != b) {
+                        document.getElementById(b).style.opacity = 0.1;
+                    } else {
+                        document.getElementById(b).style.opacity = 1; 
+                    }
+                }
+            } else {
+                for (let i = 1; i < 7; i++) {
+                    let b = "i" + i;
+                    document.getElementById(b).style.opacity = 1;
+                }
+            }
+        });
+
+        addEventListener("click", (ev) => {
+            let e = ev.target;
+            
+            if (e.tagName == "IMG") {
+                if (isLocked) return;
+
+                isLocked = true;
+                setTimeout(() => { isLocked = false; }, 1000);
+
+               
+                if (y == 1) {
+                    activeImg = e; 
+                    let t = activeImg.style;
+                    
+                   
+                    w = activeImg.offsetLeft;
+                    h = activeImg.offsetTop;
+                    y = 2;
+
+                    for (let i = 1; i < 7; i++) {
+                        let b = "i" + i;
+                        if (activeImg.id != b) {
+                            let p = document.getElementById(b).style;
+                            p.opacity = 0; 
+                            p.pointerEvents = "none"; 
+                        }
+                    }
+
+                    t.zIndex = 2;
+                    t.opacity = 1; 
+                    t.width = 600 + "px";
+                    t.left = 200 + "px";
+                    t.top = 100 + "px";
+                } 
+              
+                else {
+                    if (activeImg) {
+                        let t = activeImg.style;
+                        y = 1;
+                        
+                        for (let i = 1; i < 7; i++) {
+                            let b = "i" + i;
+                            let p = document.getElementById(b).style;
+                            p.opacity = 1; 
+                            p.pointerEvents = "auto"; 
+                        }
+
+                        t.width = 300 + "px";
+                        t.left = w + "px";
+                        t.top = h + "px";
+                        t.zIndex = 1;
+                        
+                        activeImg = null; 
+                    }
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="bas">
+        <img id="i1" class="im" src="img/p1.jpg" alt="фото">
+        <img id="i2" class="im" src="img/p2.jpg" alt="фото">
+        <img id="i3" class="im" src="img/p3.jpg" alt="фото">
+        <img id="i4" class="im" src="img/p4.jpg" alt="фото">
+        <img id="i5" class="im" src="img/p5.jpg" alt="фото">
+        <img id="i6" class="im" src="img/p6.jpg" alt="фото">
+    </div>
+</body>
+</html>
