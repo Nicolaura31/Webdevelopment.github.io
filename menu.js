@@ -28,6 +28,8 @@ const menuHTML = `
         <a href="page11.html" class="nav-item"><span class="menu-icon">&#9874;</span>карта и прямоугольник</a>
         
         <a href="page12.html" class="nav-item"><span class="menu-icon">&#9874;</span>картинки и анимация</a>
+        
+        <a href="page13.html" class="nav-item"><span class="menu-icon">&#9874;</span>квадрат из клеток(9 ноября)</a>
     </nav>
 </aside>
 `;
