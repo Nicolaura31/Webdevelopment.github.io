@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>списки и простые числа</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="lists.css">
+    <script src="menu.js" defer></script>
+</head>
+<body>
+
+    <h2>Задание 1. Состав RPG-игры</h2>
+
+    <h3>Многоуровневый список</h3>
+    <ol>
+        <li>Персонажи
+            <ol>
+                <li>Воин
+                    <ol>
+                        <li>Мощный удар</li>
+                        <li>Блок щитом</li>
+                    </ol>
+                </li>
+                <li>Маг
+                    <ol>
+                        <li>Огненный шар</li>
+                        <li>Телепортация</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>Игровой мир
+            <ol>
+                <li>Города</li>
+                <li>Подземелья</li>
+            </ol>
+        </li>
+    </ol>
+
+    <h3>Нумерованный список</h3>
+    <ol>
+        <li>Получить задание</li>
+        <li>Собрать снаряжение</li>
+        <li>Победить босса</li>
+        <li>Забрать награду</li>
+    </ol>
+
+    <h3>Маркированный список</h3>
+    <ul>
+        <li>Меч</li>
+        <li>Зелье здоровья</li>
+        <li>Факел</li>
+        <li>Карта</li>
+    </ul>
+
+    <h2>Задание 2. Простое число</h2>
+
+    <form onsubmit="check(); return false;">
+        <input type="number" id="num" placeholder="Введите число">
+        <button type="submit">Проверить</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function check() {
+            var n = Number(document.getElementById("num").value);
+            var result = document.getElementById("result");
+            var divisors = [];
+
+            for (var i = 1; i <= n; i++) {
+                if (n % i == 0) {
+                    divisors.push(i);
+                }
+            }
+
+            if (n < 2) {
+                result.innerHTML = "Число " + n + " не является простым";
+            } else if (divisors.length == 2) {
+                result.innerHTML = "Число " + n + " является простым";
+            } else {
+                result.innerHTML = "Число " + n + " не является простым. Делители: " + divisors.join(", ");
+            }
+        }
+    </script>
+
+</body>
+</html>

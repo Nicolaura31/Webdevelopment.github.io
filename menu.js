@@ -29,7 +29,9 @@ const menuHTML = `
         
         <a href="page12.html" class="nav-item"><span class="menu-icon">&#9874;</span>картинки и анимация</a>
         
-        <a href="page13.html" class="nav-item"><span class="menu-icon">&#9874;</span>квадрат из клеток(9 ноября)</a>
+        <a href="page13.html" class="nav-item"><span class="menu-icon">&#9874;</span>квадрат из клеток</a>
+        
+        <a href="page14.html" class="nav-item"><span class="menu-icon">&#9874;</span>16.11</a>
     </nav>
 </aside>
 `;
